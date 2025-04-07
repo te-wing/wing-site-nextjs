@@ -24,5 +24,8 @@
 		"eslint-config-next": "15.2.1",
 		"vercel": "^41.4.1",
 		"wrangler": "^4.7.2"
+	},
+	"engines": {
+  		"node": ">=20.9.0"
 	}
 }
