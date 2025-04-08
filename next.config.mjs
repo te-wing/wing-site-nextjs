@@ -8,6 +8,26 @@ import { setupDevPlatform } from '@cloudflare/next-on-pages/next-dev';
 setupDevPlatform().catch(console.error);
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    async redirects() {
+      return [
+        {
+            source: '/home',
+            destination: '/',
+            permanent: true, // 恒久的なリダイレクト（308）
+        },
+        {
+            source: '/downloads',
+            destination: '/download',
+            permanent: true, // 308
+        },
+        {
+            source: '/contacts',
+            destination: '/contact',
+            permanent: true, // 308
+        },
+      ];
+    },
+  };
 
 export default nextConfig;
