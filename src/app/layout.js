@@ -1,5 +1,7 @@
 import "./globals.css";
 import Link from 'next/link';
+import localFont from 'next/font/local';
+import Image from "next/image";
 
 export const metadata = {
   title: "Create Next App",
@@ -16,7 +18,7 @@ export default function RootLayout({ children }) {
           </svg>
           <h1>Wing&apos;s HomePage</h1>
           <nav>
-            <Link className='headerLinkTo' href='./home'>Home</Link>
+            <Link className='headerLinkTo' href='./'>Home</Link>
             <Link className='headerLinkTo' href='./about'>About Me</Link>
             <Link className='headerLinkTo' href='./contact'>Contacts</Link>
           </nav>
