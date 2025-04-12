@@ -1,6 +1,5 @@
 import "./globals.css";
 import Link from 'next/link';
-import localFont from 'next/font/local';
 import Image from "next/image";
 
 export const metadata = {
