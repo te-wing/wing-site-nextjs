@@ -9,6 +9,10 @@ header, footer {
     --foreground: #222222;
 }
 
+body {
+    margin: 0 23px;
+}
+
 @media (prefers-color-scheme: dark) {
     :root {
         --background: #000242;
@@ -31,7 +35,10 @@ body {
 
 .footerContainer {
     display: flex;
-}
+    align-items: center;
+    justify-content: center;
+    margin: -9px;
+  }
 
 .headerLinkTo {
     margin: auto 8px;
