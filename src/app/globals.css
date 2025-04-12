@@ -7,6 +7,8 @@ header, footer {
 :root {
     --background: #8cd7ff;
     --foreground: #222222;
+    --a-default: #3f48ffcb;
+    --a-hover: #4d56ffa9;
 }
 
 body {
@@ -17,6 +19,8 @@ body {
     :root {
         --background: #000242;
         --foreground: rgba(255, 255, 241, 0.873);
+        --a-default: #ffd6b0e7;
+        --a-hover: #ffd52ddc;
     }
 }
 
@@ -38,8 +42,17 @@ body {
     align-items: center;
     justify-content: center;
     margin: -9px;
-  }
+}
 
 .headerLinkTo {
     margin: auto 8px;
+}
+
+a {
+    font-weight: 500;
+    color: var(--a-default);
+    text-decoration: inherit;
+}
+a:hover {
+    color: var(--a-hover);
 }
