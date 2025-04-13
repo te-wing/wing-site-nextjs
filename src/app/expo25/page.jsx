@@ -59,6 +59,7 @@ export default function ContactPage() {
                     style={{ width: '100%', height: 'auto' }}
                     alt='超巨大ホットドッグ'
                 />
+                <p className='text'>万博特集，次回もお楽しみに！</p>
             </div>
         </>
     );
