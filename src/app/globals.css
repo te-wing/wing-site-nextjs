@@ -93,3 +93,17 @@ button {
 button:hover {
     border-color: var(--button-hover-border);
 }
+
+h2 {
+    text-align: center;
+}
+
+.snsButtonContainer {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+p.text {
+    text-indent: 1em;
+}
