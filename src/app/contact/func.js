@@ -7,5 +7,5 @@ export function sendEmail() {
 }
   
 export const openSNS = (platform) => {
-    window.open(`./SNS/${platform}`, '_blank');
+    window.open(`https://r.wing.osaka/s/${platform}`, '_blank');
 };

@@ -19,6 +19,8 @@ header, footer {
     --foreground: #222222;
     --a-default: #3f48ffcb;
     --a-hover: #4d56ffa9;
+    --button-background: #b8e5ff;
+    --button-hover-border: #4d56ffa9;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,6 +29,7 @@ header, footer {
         --foreground: rgba(255, 255, 241, 0.873);
         --a-default: #ffd6b0e7;
         --a-hover: #ffd52ddc;
+        --button-background: #0044ff16;
     }
 }
 
@@ -72,4 +75,21 @@ h1, h2, a.headerLinkTo {
 
 div.children {
     margin: auto 22px;
+}
+
+button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: Playwrite;
+    background-color: var(--button-background);
+    cursor: pointer;
+    transition: border-color 0.25s;
+    align-items: center;      /* 垂直方向の中央揃え */
+}
+
+button:hover {
+    border-color: var(--button-hover-border);
 }
