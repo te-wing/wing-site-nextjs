@@ -24,6 +24,7 @@ export default function RootLayout({ children }) {
             <Link className='headerLinkTo' href='./about'>About Me</Link>
             <Link className='headerLinkTo' href='./contact'>Contacts</Link>
           </nav>
+          <Link className='campaign' href='./expo25'>万博特別キャンペーン：ミャクミャクカラー！</Link>
         </header>
         <div className='children'>
           {children}
