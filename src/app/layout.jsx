@@ -25,7 +25,9 @@ export default function RootLayout({ children }) {
             <Link className='headerLinkTo' href='./contact'>Contacts</Link>
           </nav>
         </header>
-        {children}
+        <div className='children'>
+          {children}
+        </div>
         <footer>
           <p>&copy; 2025 Wing. 無断転載・無断改変を禁じます．</p>
           <div className="footerContainer">

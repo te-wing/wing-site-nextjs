@@ -69,3 +69,7 @@ a, p, h3 {
 h1, h2, a.headerLinkTo {
     font-family: Playwrite;
 }
+
+div.children {
+    margin: auto 22px;
+}
