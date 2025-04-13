@@ -8,7 +8,7 @@ export const metadata = {
 export default function ContactPage() {
     return (
         <>
-            <h2 className='zenMaru'>万博応援中！</h2>
+            <h2 className='zenMaru'>万博！</h2>
             <p className='center'>大阪万博が嬉しくて，勝手に盛り上がってます！</p>
             <div>
                 <h3 className='center'>25年4月13日：開幕初日，覗いてきました！めっちゃ混んでたけど，思ってたよりは並ばんで済んだで．</h3>
