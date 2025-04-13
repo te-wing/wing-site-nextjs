@@ -1,3 +1,13 @@
+@font-face {
+    font-family: Playwrite;
+    src: url('/fonts/Playwrite.ttf');
+}
+
+@font-face {
+    font-family: ZenMaru;
+    src: url('/fonts/ZenMaru.ttf');
+}
+
 header, footer {
     align-items: center;
     display: flex;
@@ -9,10 +19,6 @@ header, footer {
     --foreground: #222222;
     --a-default: #3f48ffcb;
     --a-hover: #4d56ffa9;
-}
-
-body {
-    margin: 0 23px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -41,7 +47,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: -9px;
 }
 
 .headerLinkTo {
@@ -55,4 +60,12 @@ a {
 }
 a:hover {
     color: var(--a-hover);
+}
+
+a, p, h3 {
+    font-family: ZenMaru;
+}
+
+h1, h2, a.headerLinkTo {
+    font-family: Playwrite;
 }
