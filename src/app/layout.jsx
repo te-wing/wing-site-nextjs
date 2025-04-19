@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
           </div>
           <div className="footerContainer">
             <p>ブログ：</p>
-            <a href="./SNS/Blog" target="_blank">https://blog.wing.osaka/posts</a>
+            <a href="https://r.wing.osaka/s/Blog" target="_blank">https://blog.wing.osaka/posts</a>
           </div>
           <div className="footerContainer">
             <p>ダウンロード：</p>
