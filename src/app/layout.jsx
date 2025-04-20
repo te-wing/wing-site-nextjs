@@ -20,11 +20,11 @@ export default function RootLayout({ children }) {
           </svg>
           <h1>Wing&apos;s HomePage</h1>
           <nav>
-            <Link className='headerLinkTo' href='./'>Home</Link>
-            <Link className='headerLinkTo' href='./about'>About Me</Link>
-            <Link className='headerLinkTo' href='./contact'>Contacts</Link>
+            <Link className='headerLinkTo' href='/'>Home</Link>
+            <Link className='headerLinkTo' href='/about'>About Me</Link>
+            <Link className='headerLinkTo' href='/contact'>Contacts</Link>
           </nav>
-          <Link className='campaign' href='./expo25'>万博特別キャンペーン：ミャクミャクカラー！</Link>
+          <Link className='campaign' href='/expo25'>万博特別キャンペーン：ミャクミャクカラー！</Link>
         </header>
         <div className='children'>
           {children}
