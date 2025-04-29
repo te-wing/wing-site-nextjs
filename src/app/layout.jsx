@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
             <Link className='headerLinkTo' href='/about'>About Me</Link>
             <Link className='headerLinkTo' href='/contact'>Contacts</Link>
           </nav>
-          <a className='campaign' href='https://blog.wing.osaka/tags/万博/ target='_blank'>万博特別キャンペーン：ミャクミャクカラー！</Link>
+          <a className='campaign' href='https://blog.wing.osaka/tags/万博/ target='_blank'>万博特別キャンペーン：ミャクミャクカラー！</a>
         </header>
         <div className='children'>
           {children}
