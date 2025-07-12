@@ -1,10 +1,9 @@
-import "./globals.css";
 import "./globals.scss";
 import Link from 'next/link';
 
 export const metadata = {
   title: "Wingのサイト",
-  description: "Wingのサイト（ベータ版）．Next.jsで作りました．",
+  description: "Wingのサイト．Next.jsで作りました．",
   icons: [
     { rel: 'icon', url: '/wingLogo.png' },
     { rel: 'apple-touch-icon', url: '/wingLogo.png', sizes: '1600x1600' },
