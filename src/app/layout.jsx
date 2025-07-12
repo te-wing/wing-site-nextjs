@@ -25,7 +25,6 @@ export default function RootLayout({ children }) {
             <Link className='headerLinkTo' href='/about'>About Me</Link>
             <Link className='headerLinkTo' href='/contact'>Contacts</Link>
           </nav>
-          <a className='campaign' href='https://blog.wing.osaka/tags/万博/' target='_blank'>万博特別キャンペーン：ミャクミャクカラー！</a>
         </header>
         <div className='children'>
           {children}
@@ -42,7 +41,7 @@ export default function RootLayout({ children }) {
           </div>
           <div className="footerContainer">
             <p>ダウンロード：</p>
-            <Link href="/downloads">https://wing.osaka/downloads</Link>
+            <Link href="/downloads">wing.osaka/downloads</Link>
           </div>
         </footer>
       </body>

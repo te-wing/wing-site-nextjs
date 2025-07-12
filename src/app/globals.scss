@@ -14,7 +14,7 @@ header, footer {
     flex-direction: column;   /* 縦並び */
 }
 
-/*:root {
+root {
     --background: #8cd7ff;
     --foreground: #222222;
     --a-default: #3f48ffcb;
@@ -31,15 +31,6 @@ header, footer {
         --a-hover: #ffd52ddc;
         --button-background: #0044ff16;
     }
-}*/
-
-:root {
-    --background: #006aff;
-    --foreground: #ffffff;
-    --a-default: #ff1313cb;
-    --a-hover: #b70000;
-    --button-background: #ffffff;
-    --button-hover-border: rgb(238,15,16);
 }
 
 html,
@@ -97,6 +88,7 @@ button {
     cursor: pointer;
     transition: border-color 0.25s;
     align-items: center;      /* 垂直方向の中央揃え */
+    color: var(--foreground);
 }
 
 button:hover {
