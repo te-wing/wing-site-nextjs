@@ -21,8 +21,8 @@ export default function RootLayout({ children }) {
           </svg>
           <h1>Wing&apos;s HomePage</h1>
           <nav>
-            <Link className='headerLinkTo' href='/'>Home</Link>
-            <Link className='headerLinkTo' href='/about'>About Me</Link>
+            <Link className='headerLinkTo' href='/'>Home</Link> |
+            <Link className='headerLinkTo' href='/about'>About Me</Link> |
             <Link className='headerLinkTo' href='/contact'>Contacts</Link>
           </nav>
         </header>
@@ -31,18 +31,20 @@ export default function RootLayout({ children }) {
         </div>
         <footer>
           <p>&copy; 2025 Wing. 無断転載・無断改変を禁じます．</p>
-          <div className="footerContainer">
-            <p>連絡先：</p>
-            <a href="mailto:wing@me.wing.osaka">wing@me.wing.osaka</a>
-          </div>
-          <div className="footerContainer">
-            <p>ブログ：</p>
-            <a href="https://r.wing.osaka/s/Blog" target="_blank">blog.wing.osaka</a>
-          </div>
-          <div className="footerContainer">
-            <p>ダウンロード：</p>
-            <Link href="/downloads">wing.osaka/downloads</Link>
-          </div>
+          <section>
+            <div className="footerContainer">
+              <p className='margin-0' >連絡先：</p>
+              <a href="mailto:wing@me.wing.osaka">wing@me.wing.osaka</a>
+            </div>
+            <div className="footerContainer">
+              <p className='margin-0' >ブログ：</p>
+              <a href="https://r.wing.osaka/s/Blog" target="_blank">blog.wing.osaka</a>
+            </div>
+            <div className="footerContainer">
+              <p className='margin-0' >ダウンロード：</p>
+              <Link href="/downloads">wing.osaka/downloads</Link>
+            </div>
+          </section>
         </footer>
       </body>
     </html>
