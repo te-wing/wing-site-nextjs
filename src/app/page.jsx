@@ -17,7 +17,7 @@ export default function HomePage() {
             <h3 className={styles.widgetTitle}>Wingが撮影した写真</h3>
             <p>Wingは，写真を撮ることが趣味．とはいっても，自分が写真に映ることはあんまり好きやないね．</p>
             <div className={styles.spacer}></div>
-            <Link href='/hobby/photo'>See more...:.</Link>
+            <Link href='/hobby/photo'>See more..:.</Link>
           </div>
         </div>
       </section>
