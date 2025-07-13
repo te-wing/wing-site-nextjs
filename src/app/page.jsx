@@ -10,7 +10,7 @@ export default function HomePage() {
   return (
     <>
       <h2>Home</h2>
-      <section>
+      <section className={styles.center}>
         <div className={styles.photoWidget}>
           <div className={styles.widgetContent}>
             <div className={styles.spacer}></div>

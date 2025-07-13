@@ -58,3 +58,12 @@ h3.widgetTitle {
 div.spacer {
     height: 1px;
 }
+
+.center { //ちょっと違う...
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
