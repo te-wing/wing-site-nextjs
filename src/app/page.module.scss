@@ -5,10 +5,14 @@
     max-height: 380px;
     background-image: 
     linear-gradient(to right, var(--background) 0%, transparent 68%),
-    url('/homeSrc/_DSC0080.JPG');
+    url('/homeSrc/_DSC0080.webp');
     background-repeat: no-repeat;
     background-size: cover; /* 必要なら調整 */
     background-position: center;
+}
+
+.blogWidget {
+    text-align: right;
 }
 
 h3.widgetTitle {
