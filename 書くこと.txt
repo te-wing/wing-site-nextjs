@@ -1,5 +1,8 @@
 /index
 title: Home
+写真趣味ページへのウィジェット
+ブログウィジェット
+プログラミング趣味ページへのウィジェット
 
 /about
 title: About Me
