@@ -4,7 +4,7 @@
     width: 100%;
     max-height: 500px;
     background-image: 
-    linear-gradient(to right, var(--background) 0%, transparent 68%),
+    linear-gradient(to right, var(--background) 0%, transparent 80%),
     url('/homeSrc/_DSC0080.webp');
     background-repeat: no-repeat;
     background-size: cover; /* 必要なら調整 */
@@ -32,7 +32,7 @@
     width: 100%;
     max-height: 500px;
     background-image: 
-    linear-gradient(to right, var(--background) 0%, transparent 68%),
+    linear-gradient(to right, var(--background) 0%, transparent 80%),
     url('/homeSrc/ImgPlyGr011.jpg');
     background-repeat: no-repeat;
     background-size: cover; /* 必要なら調整 */
@@ -46,11 +46,11 @@ h3.widgetTitle {
 
 .widgetContent {
     margin: 0;
-    width: 49%;
+    width: 60%;
 }
 
 .widgetContentRight {
-  width: 49%;
+  width: 60%;
   margin: 0 0 0 auto; // ← 左を auto にする！
   text-align: right; // 文字も右揃えに
 }
