@@ -22,7 +22,7 @@ export default function HomePage() {
           </div>
         </div>
         <div className={styles.blogWidget}>
-          <div className={styles.widgetContent}>
+          <div className={styles.widgetContentRight}>
             <div className={styles.spacer}></div>
             <h3 className={styles.widgetTitle}>Wingのブログ！</h3>
             <p>Wingがブログを開始！とりあえずジャンル関係なく色々書いてます．まだまだ模索中っていう感じなんで，ご意見とかあったらぜひ，連絡くださいね．</p>
