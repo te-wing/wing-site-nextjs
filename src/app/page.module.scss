@@ -1,13 +1,29 @@
-.homeWidget {
+.photoWidget {
     background-color: var(--background);
     aspect-ratio: 16 / 9;
-    width: 100%;
+    max-width: 100%;
+    max-height: 380px;
     background-image: 
     linear-gradient(to right, var(--background) 0%, transparent 68%),
-    url('/homeSrc/_DSC0080.JPG');
+    url('/homeSrc/_DSC0080.webp');
     background-repeat: no-repeat;
     background-size: cover; /* 必要なら調整 */
     background-position: center;
+    margin-top: 8px;
+}
+
+.blogWidget {
+    background-color: var(--background);
+    aspect-ratio: 16 / 9;
+    max-width: 100%;
+    max-height: 380px;
+    background-image: 
+    linear-gradient(to left, var(--background) 0%, transparent 80%),
+    url('/homeSrc/_iPhone011.webp');
+    background-repeat: no-repeat;
+    background-size: cover; /* 必要なら調整 */
+    background-position: center;
+    margin-top: 17px;
 }
 
 h3.widgetTitle {
@@ -17,6 +33,12 @@ h3.widgetTitle {
 .widgetContent {
     margin: 0 40px;
     width: 49%;
+}
+
+.widgetContentRight {
+  width: 49%;
+  margin: 0 40px 0 auto; // ← 左を auto にする！
+  text-align: right; // 文字も右揃えに
 }
 
 div.spacer {
