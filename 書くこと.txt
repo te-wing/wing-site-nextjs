@@ -1,0 +1,21 @@
+/index
+title: Home
+
+/about
+title: About Me
+
+/contat
+title: Contacts
+
+/download
+title: Downloads
+
+/hobbby
+
+
+/hobby/photo
+
+
+/hobby/program
+
+

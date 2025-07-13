@@ -1,4 +1,4 @@
-import Client from './client.jsx'
+import Client from './client.jsx';
 
 export const metadata = {
     title: 'Contacts | Wingのサイト',

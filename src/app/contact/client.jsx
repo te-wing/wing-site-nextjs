@@ -1,4 +1,5 @@
 'use client';
+
 import { sendEmail , openSNS } from './func.js';
 
 export default function Client() {
