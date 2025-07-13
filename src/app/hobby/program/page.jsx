@@ -6,7 +6,7 @@ export const metadata = {
 export default function ProgramHobbyPage() {
     return (
         <>
-        
+            <p>申し訳ありません，準備中です...</p>
         </>
     );
 }

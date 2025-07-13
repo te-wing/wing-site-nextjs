@@ -31,6 +31,16 @@ export default function HomePage() {
             <div className={styles.spacer}></div>
           </div>
         </div>
+        <div className={styles.progWidget}>
+          <div className={styles.widgetContent}>
+            <div className={styles.spacer}></div>
+            <h3 className={styles.widgetTitle}>じつはプログラミングしてます．</h3>
+            <p>Wingはプログラミングしてて，Swiftっていう言語をいじったりしてます．最近はウェブ開発に興味があるんで，こういうサイトを自分でコーディングして作ったりしてます．</p>
+            <div className={styles.spacer}></div>
+            <Link href='/hobby/program'>See more..:.</Link>
+            <div className={styles.spacer}></div>
+          </div>
+        </div>
       </section>
     </>
   );
