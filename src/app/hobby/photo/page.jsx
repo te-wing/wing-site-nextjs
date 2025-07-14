@@ -11,8 +11,9 @@ export default function PhotoHobbyPage() {
 
   return (
     <>
-      <p>※読み込みがめっちゃ遅いです．我慢してください．すみません．</p>
-      <div className={styles.sliderContainer}>
+      <h3>写真・カメラ</h3>
+      <p>※アニメーションの読み込みがめっちゃ遅いです．我慢してください．</p>
+      <section className={styles.sliderContainer}>
         {/* 1列目 */}
         <div className={styles.sliderTrack}>
           {slidesToRight.map((src, idx) => (
@@ -38,7 +39,12 @@ export default function PhotoHobbyPage() {
             </div>
           ))}
         </div>
-      </div>
+      </section>
+      <p>こんな感じでいろいろ写真を撮って楽しんでます．<a href='https://r.wing.osaka/s/blog' target='_blank'>ブログ</a>のほうにもちょくちょく上げてるんで，見てください！</p>
+      <h4>写真はやっぱり構図が大事！</h4>
+      <p>
+        自分は写真を撮るときは，ある程度ちゃんとしたミラーレスカメラ（<a href='https://r.wing.osaka/camera/α6000' target='_blank'>Sony α-6000</a>）を使ったり，iPhoneで撮ったりしてます．
+      </p>
     </>
   );
 }
