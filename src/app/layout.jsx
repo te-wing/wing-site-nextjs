@@ -1,5 +1,6 @@
 import "./globals.scss";
 import Link from 'next/link';
+import BackToTopButton from './BackToTopButton.jsx'
 
 export const metadata = {
   title: "Wingのサイト",
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
         <div className='children'>
           {children}
         </div>
+        <BackToTopButton />
         <footer>
           <p>&copy; 2025 Wing. 無断転載・無断改変を禁じます．</p>
           <section>
