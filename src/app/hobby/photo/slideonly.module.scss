@@ -5,19 +5,8 @@
 
 .sliderTrack {
   display: flex;
-  flex-direction: row; // rowはデフォやけど念のため！
   width: fit-content;
   animation: scroll 30s linear infinite;
-}
-
-.slide {
-  flex-shrink: 0;
-}
-
-.slide img {
-  height: 100px;
-  width: auto;
-  display: block;
 }
 
 @keyframes scroll {
@@ -32,6 +21,9 @@
 .slide img {
   border-radius: 7px;
   margin: 0 3px;
+  height: 100px;
+  width: auto;
+  display: block;
 }
 
 .sliderContainer {
@@ -44,12 +36,6 @@
   gap: 20px; // ← お好みで
 }
 
-.sliderTrack {
-  display: flex;
-  width: fit-content;
-  animation: scroll 30s linear infinite;
-}
-
 .sliderTrackReverse {
   display: flex;
   width: fit-content;
@@ -58,13 +44,6 @@
 
 .slide {
   flex-shrink: 0;
-}
-
-.slide img {
-  height: 100px;
-  width: auto;
-  display: block;
-  border-radius: 12px;
 }
 
 @keyframes scroll {
