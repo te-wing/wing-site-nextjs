@@ -6,11 +6,22 @@ export const metadata = {
 };
 
 export default function PhotoHobbyPage() {
-  // スライド画像のパス
   const slidesToRight = Array.from({ length: 10 }, (_, i) => `/phtslide/toRight/slide${i + 11}.webp`);
+
   return (
-    <>
-      <p>申し訳ありません，準備中です...</p>
-    </>
+    <div className={styles.sliderContainer}>
+      <div className={styles.sliderTrack}>
+        {slidesToRight.map((src, idx) => (
+          <div className={styles.slide} key={idx}>
+            <img src={src} alt={`Slide ${idx + 11}`} height={100} />
+          </div>
+        ))}
+        {slidesToRight.map((src, idx) => (
+          <div className={styles.slide} key={`duplicate-${idx}`}>
+            <img src={src} alt={`Slide duplicate ${idx + 11}`} height={100} />
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }

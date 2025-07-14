@@ -1,0 +1,30 @@
+.sliderContainer {
+  overflow: hidden;
+  width: 100%;
+}
+
+.sliderTrack {
+  display: flex;
+  flex-direction: row; // rowはデフォやけど念のため！
+  width: fit-content;
+  animation: scroll 30s linear infinite;
+}
+
+.slide {
+  flex-shrink: 0;
+}
+
+.slide img {
+  height: 100px;
+  width: auto;
+  display: block;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
