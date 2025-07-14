@@ -41,9 +41,12 @@ export default function PhotoHobbyPage() {
         </div>
       </section>
       <p>こんな感じでいろいろ写真を撮って楽しんでます．<a href='https://r.wing.osaka/s/blog' target='_blank'>ブログ</a>のほうにもちょくちょく上げてるんで，見てください！</p>
-      <h4>写真はやっぱり構図が大事！</h4>
+      <h4>写真はやっぱり構図が大事!?</h4>
       <p>
-        自分は写真を撮るときは，ある程度ちゃんとしたミラーレスカメラ（<a href='https://r.wing.osaka/camera/α6000' target='_blank'>Sony α-6000</a>）を使ったり，iPhoneで撮ったりしてます．
+        自分は写真を撮るときは，ある程度ちゃんとしたミラーレスカメラ（<a href='https://r.wing.osaka/camera/α6000' target='_blank'>Sony α-6000</a>）を使ったり，iPhoneで撮ったりしてます．<br />
+        こんな話をすると，「iPhoneで撮ってんの!?」みたいな声が今にも聞こえてきそうですけど，意外と性能は良いんですよねぇ（今は<a href='https://r.wing.osaka/camera/se3' target='_blank'>iPhone SEの第三世代</a>）．ただ，スマホで手軽に高品質な写真が撮れるようになったからこそ，写真は構図が大事になってきていると思うんですよねぇ〜．<br />
+        とはいっても，別に構図の専門家ではないので，あんまり知りませんけどね．<br />
+        ただ，画像の中央からちょっとずれたあたりに，線とか，色と色の境界線があったりとかすると，見た目よくなると思ってます（めっちゃテキトーやん）．
       </p>
     </>
   );
