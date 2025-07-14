@@ -1,4 +1,4 @@
-import styles from './page.module.scss';
+import styles from './photohobby.module.scss';
 
 export const metadata = {
   title: '写真 - My Hobby | Wingのサイト',
