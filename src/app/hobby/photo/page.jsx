@@ -1,4 +1,4 @@
-import styles from './photohobby.module.scss';
+import styles from './slideonly.module.scss';
 
 export const metadata = {
   title: '写真 - My Hobby | Wingのサイト',
@@ -10,33 +10,35 @@ export default function PhotoHobbyPage() {
   const slidesToLeft = Array.from({length: 10}, (_, i) => `/phtslide/toLeft/slide${i + 11}.webp`);
 
   return (
-    <div className={styles.sliderContainer}>
-      {/* 1列目 */}
-      <div className={styles.sliderTrack}>
-        {slidesToRight.map((src, idx) => (
-          <div className={styles.slide} key={idx}>
-            <img src={src} alt={`Slide ${idx + 11}`} height={100} />
-          </div>
-        ))}
-        {slidesToRight.map((src, idx) => (
-          <div className={styles.slide} key={`duplicate-${idx}`}>
-            <img src={src} alt={`Slide duplicate ${idx + 11}`} height={100} />
-          </div>
-        ))}
+    <>
+      <p>※読み込みがめっちゃ遅いです．我慢してください．すみません．</p>
+      <div className={styles.sliderContainer}>
+        {/* 1列目 */}
+        <div className={styles.sliderTrack}>
+          {slidesToRight.map((src, idx) => (
+            <div className={styles.slide} key={idx}>
+              <img src={src} alt={`Slide ${idx + 11}`} />
+            </div>
+          ))}
+          {slidesToRight.map((src, idx) => (
+            <div className={styles.slide} key={`duplicate-${idx}`}>
+              <img src={src} alt={`Slide duplicate ${idx + 11}`} />
+            </div>
+          ))}
+        </div>
+        <div className={styles.sliderTrackReverse}>
+          {slidesToLeft.map((src, idx) => (
+            <div className={styles.slide} key={`reverse-${idx}`}>
+              <img src={src} alt={`Reverse Slide ${idx + 11}`} />
+            </div>
+          ))}
+          {slidesToLeft.map((src, idx) => (
+            <div className={styles.slide} key={`reverse-duplicate-${idx}`}>
+              <img src={src} alt={`Reverse Slide duplicate ${idx + 11}`} />
+            </div>
+          ))}
+        </div>
       </div>
-      {/* 2列目（逆向き） */}
-      <div className={styles.sliderTrackReverse}>
-        {slidesToLeft.map((src, idx) => (
-          <div className={styles.slide} key={`reverse-${idx}`}>
-            <img src={src} alt={`Reverse Slide ${idx + 11}`} height={100} />
-          </div>
-        ))}
-        {slidesToLeft.map((src, idx) => (
-          <div className={styles.slide} key={`reverse-duplicate-${idx}`}>
-            <img src={src} alt={`Reverse Slide duplicate ${idx + 11}`} height={100} />
-          </div>
-        ))}
-      </div>
-    </div>
+    </>
   );
 }
