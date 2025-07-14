@@ -9,11 +9,11 @@ export const metadata = {
 
 export default function HobbyLayout({ children }) {
     return (
-        <html lang="ja">
-            <h2>My Hobby</h2>
-            <div className='children'>
-                {children}
-            </div>
-        </html>
+      <>
+        <h2>My Hobby</h2>
+        <div className='children'>
+          {children}
+        </div>
+      </>
     );
 }
