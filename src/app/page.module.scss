@@ -67,3 +67,22 @@ div.spacer {
   gap: 2rem;
   padding: 2rem;
 }
+
+// 共通設定
+.widget {
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+
+  &.slideInRight {
+    transform: translateX(100px);
+  }
+
+  &.slideInLeft {
+    transform: translateX(-100px);
+  }
+
+  &.isVisible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
