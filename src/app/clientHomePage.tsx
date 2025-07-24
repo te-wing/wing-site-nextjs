@@ -40,7 +40,7 @@ export default function ClientHomePage() {
       { threshold: 0.1 }
     );
 
-    if (waveRef.current) obserber.observe(waveRef.current);
+    if (waveRef.current) observer.observe(waveRef.current);
     if (photoRef.current) observer.observe(photoRef.current);
     if (blogRef.current) observer.observe(blogRef.current);
     if (progRef.current) observer.observe(progRef.current);
