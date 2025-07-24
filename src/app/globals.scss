@@ -25,10 +25,8 @@ footer {
     --a-hover: #4d56ffa9;
     --button-background: #b8e5ff;
     --button-hover-border: #4d56ffa9;
-}
 
-@media (prefers-color-scheme: dark) {
-    :root {
+    @media (prefers-color-scheme: dark) {
         --background: #000242;
         --foreground: rgba(255, 255, 241, 0.873);
         --a-default: #ffd6b0e7;
