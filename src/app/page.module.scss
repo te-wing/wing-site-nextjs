@@ -1,3 +1,17 @@
+.waveWidget {
+    background-color: var(--background);
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    max-height: 500px;
+    background-image: 
+    linear-gradient(to right, var(--background) 0%, transparent 80%),
+    url('/homeSrc/wavewing.png');
+    background-repeat: no-repeat;
+    background-size: cover; /* 必要なら調整 */
+    background-position: center;
+    margin-top: 17px;
+}
+
 .photoWidget {
     background-color: var(--background);
     aspect-ratio: 16 / 9;

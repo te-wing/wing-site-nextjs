@@ -5,10 +5,12 @@ import styles from './page.module.scss';
 import Link from 'next/link';
 
 export default function ClientHomePage() {
+  const waveRef = useRef<HTMLDivElement>(null);
   const photoRef = useRef<HTMLDivElement>(null);
   const blogRef = useRef<HTMLDivElement>(null);
   const progRef = useRef<HTMLDivElement>(null);
 
+  const [waveVisible, setWaveVisible] = useState(false);
   const [photoVisible, setPhotoVisible] = useState(false);
   const [blogVisible, setBlogVisible] = useState(false);
   const [progVisible, setProgVisible] = useState(false);
@@ -17,6 +19,10 @@ export default function ClientHomePage() {
     const observer = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
+          if (entry.target === waveRef.current && entry.isIntersecting) {
+            setWaveVisible(true);
+            observer.unobserve(entry.target);
+          }
           if (entry.target === photoRef.current && entry.isIntersecting) {
             setPhotoVisible(true);
             observer.unobserve(entry.target);
@@ -34,6 +40,7 @@ export default function ClientHomePage() {
       { threshold: 0.1 }
     );
 
+    if (waveRef.current) obserber.observe(waveRef.current);
     if (photoRef.current) observer.observe(photoRef.current);
     if (blogRef.current) observer.observe(blogRef.current);
     if (progRef.current) observer.observe(progRef.current);
@@ -45,6 +52,23 @@ export default function ClientHomePage() {
     <>
       <h2>Home</h2>
       <section className={styles.center}>
+        {/* blogWidget: 左から */}
+        <div
+          ref={waveRef}
+          className={`${styles.widget} ${styles.waveWidget} ${styles.slideInLeft} ${
+            blogVisible ? styles.isVisible : ''
+          }`}
+        >
+          <div className={styles.widgetContentRight}>
+            <div className={styles.spacer}></div>
+            <h3 className={styles.widgetTitle}>Wave App by Wing</h3>
+            <p>Wingがお届けする，初めての本格的なアプリは，なんと，波の模型です！</p>
+            <div className={styles.spacer}></div>
+            <a href='https://wave.app.wing.osaka' target='_blank'>See more..:.</a>
+            <div className={styles.spacer}></div>
+          </div>
+        </div>
+
         {/* photoWidget: 右から */}
         <div
           ref={photoRef}
