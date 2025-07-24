@@ -56,7 +56,7 @@ export default function ClientHomePage() {
         <div
           ref={waveRef}
           className={`${styles.widget} ${styles.waveWidget} ${styles.slideInLeft} ${
-            blogVisible ? styles.isVisible : ''
+            waveVisible ? styles.isVisible : ''
           }`}
         >
           <div className={styles.widgetContentRight}>
