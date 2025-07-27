@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
             </div>
             <div className="footerContainer">
               <p className='margin-0' >ブログ：</p>
-              <a href="https://r.wing.osaka/s/Blog" target="_blank">blog.wing.osaka</a>
+              <a href="https://diaries.wing.osaka" target="_blank">diaries.wing.osaka</a>
             </div>
             <div className="footerContainer">
               <p className='margin-0' >ダウンロード：</p>
