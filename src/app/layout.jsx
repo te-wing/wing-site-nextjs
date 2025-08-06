@@ -2,6 +2,7 @@ import "./globals.scss";
 import Link from 'next/link';
 import BackToTopButton from './BackToTopButton.jsx';
 import WingLogo from './wingLogo';
+import Formbox from "./formbox";
 
 export const metadata = {
   title: "Wingのサイト",
@@ -47,6 +48,7 @@ export default function RootLayout({ children }) {
               <Link href="/downloads">wing.osaka/downloads</Link>
             </div>
           </section>
+          <Formbox />
         </footer>
       </body>
     </html>
