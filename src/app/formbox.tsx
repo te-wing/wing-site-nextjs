@@ -3,6 +3,8 @@
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 
+import styles from './formbox.module.scss';
+
 // 修正後のFormDataの型を定義
 type FormData = {
   email?: string;
@@ -55,11 +57,11 @@ export default function Formbox() {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+    <form onSubmit={handleSubmit(onSubmit)} className={styles.formBox}>
       {/* お名前のフィールドを削除 */}
-
-      <div>
-        <label htmlFor="email">メールアドレス（任意）</label>
+      <h3>アンケート</h3>
+      <div className={styles.formSec}>
+        <label className={styles.formguide} htmlFor="email">メールアドレス（任意）</label>
         <input
           id="email"
           type="email"
@@ -74,8 +76,8 @@ export default function Formbox() {
         {errors.email && <p>{errors.email.message}</p>}
       </div>
 
-      <div>
-        <label htmlFor="message">ご意見・ご要望</label>
+      <div className={styles.formSec}>
+        <label className={styles.formguide} htmlFor="message">ご意見・ご要望</label>
         <textarea
           id="message"
           rows={4}
