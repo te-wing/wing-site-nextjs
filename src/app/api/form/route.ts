@@ -16,7 +16,12 @@ export async function POST(request: Request) {
       subject: '新しいアンケートの回答が届きました',
       content: [{
         type: 'text/plain',
-        value: `アンケートの回答:\n\n${JSON.stringify(formData, null, 2)}`,
+        value: `
+          新しい回答が届きました．
+          メールアドレス: ${formData.email || '未入力'}
+          ご意見・ご要望:
+          ${formData.message}
+        `,
       }],
     };
 
