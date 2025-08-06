@@ -1,4 +1,4 @@
-// app/api/form/route.ts
+export const runtime = 'edge';
 
 import { NextResponse } from 'next/server';
 
