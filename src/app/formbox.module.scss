@@ -19,3 +19,27 @@
     width: 390px;
   }
 }
+
+.formBox button[type="submit"] {
+  margin: 10px 0;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+// 有効な状態のボタン
+.submitButtonActive {
+  background-color: #007bff; // 青色など、送信できる状態の色
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+
+// 無効な状態のボタン
+.submitButtonInactive {
+  background-color: #cccccc; // グレーなど、送信できない状態の色
+  cursor: not-allowed;
+}

@@ -17,10 +17,17 @@ export default function Formbox() {
     handleSubmit,
     formState: { errors },
     reset,
+    watch, // watchを追加
   } = useForm<FormData>();
   
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  // messageフィールドの値を監視
+  const messageValue = watch('message');
+  
+  // messageValueが空かどうかでボタンのスタイルを制御する
+  const buttonClassName = messageValue ? styles.submitButtonActive : styles.submitButtonInactive;
 
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
@@ -77,7 +84,7 @@ export default function Formbox() {
       </div>
 
       <div className={styles.formSec}>
-        <label className={styles.formguide} htmlFor="message">ご意見・ご要望</label>
+        <label className={styles.formguide} htmlFor="message">ご意見・ご要望（個人情報は含めないでください．）</label>
         <textarea
           id="message"
           rows={4}
@@ -88,7 +95,8 @@ export default function Formbox() {
 
       <button
         type="submit"
-        disabled={isSubmitting}
+        disabled={isSubmitting || !messageValue} // messageValueが空の時はボタンを無効化
+        className={buttonClassName} // CSSクラスを動的に適用
       >
         {isSubmitting ? '送信中...' : '送信する'}
       </button>
