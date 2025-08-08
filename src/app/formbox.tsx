@@ -65,8 +65,8 @@ export default function FormBox() {
 
   return (
     <div className={styles.formBox}>
-      <h4>アンケート</h4>
-      <form id="survey-form">
+      <h4 className={styles.h4}>アンケート</h4>
+      <form className={styles.form} id="survey-form">
         <label htmlFor="username">ニックネーム（任意）：</label>
         <input type="text" id="username" name="username" /><br /><br />
         <label htmlFor="email">メールアドレス（任意）：</label>
@@ -83,7 +83,7 @@ export default function FormBox() {
         <br /><br />
         <label htmlFor="comment">ご意見・ご感想（任意）：</label>
         <textarea id="comment" name="comment"></textarea><br/><br/>
-        <button type="submit">送信</button>
+        <button className="zenMaru" type="submit">送信</button>
       </form>
     </div>
   );

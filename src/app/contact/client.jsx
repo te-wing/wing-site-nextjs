@@ -1,5 +1,6 @@
 'use client';
 
+import styles from './client.module.scss'
 import { sendEmail , openSNS } from './func.js';
 
 export default function Client() {
