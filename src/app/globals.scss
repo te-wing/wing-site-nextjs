@@ -1,38 +1,38 @@
 @font-face {
-    font-family: Playwrite;
-    src: url('/fonts/Playwrite.ttf');
+  font-family: Playwrite;
+  src: url('/fonts/Playwrite.ttf');
 }
 
 @font-face {
-    font-family: ZenMaru;
-    src: url('/fonts/ZenMaru.ttf');
+  font-family: ZenMaru;
+  src: url('/fonts/ZenMaru.ttf');
 }
 
 header, footer {
-    align-items: center;
-    display: flex;
-    flex-direction: column;   /* 縦並び */
+  align-items: center;
+  display: flex;
+  flex-direction: column;   /* 縦並び */
 }
 
 footer {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 :root {
-    --background: #8cd7ff;
-    --foreground: #222222;
-    --a-default: #3f48ffcb;
-    --a-hover: #4d56ffa9;
-    --button-background: #b8e5ff;
-    --button-hover-border: #4d56ffa9;
+  --background: #8cd7ff;
+  --foreground: #222222;
+  --a-default: #3f48ffcb;
+  --a-hover: #4d56ffa9;
+  --button-background: #b8e5ff;
+  --button-hover-border: #4d56ffa9;
 
-    @media (prefers-color-scheme: dark) {
-        --background: #000242;
-        --foreground: rgba(255, 255, 241, 0.873);
-        --a-default: #ffd6b0e7;
-        --a-hover: #ffd52ddc;
-        --button-background: #0044ff16;
-    }
+  @media (prefers-color-scheme: dark) {
+    --background: #000242;
+    --foreground: rgba(255, 255, 241, 0.873);
+    --a-default: #ffd6b0e7;
+    --a-hover: #ffd52ddc;
+    --button-background: #0044ff16;
+  }
 }
 
 html,
@@ -42,93 +42,98 @@ body {
 }
 
 body {
-    color: var(--foreground);
-    background: var(--background);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  color: var(--foreground);
+  background: var(--background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .footerContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .headerLinkTo {
-    margin: auto 8px;
+  margin: auto 8px;
 }
 
 a {
-    font-weight: 500;
-    color: var(--a-default);
-    text-decoration: inherit;
-}
-a:hover {
-    color: var(--a-hover);
+  font-weight: 500;
+  color: var(--a-default);
+  text-decoration: inherit;
+  :hover {
+    color: var(--a-hover)
+  }
 }
 
 a, p, h3, h4 {
-    font-family: ZenMaru;
+  font-family: ZenMaru;
 }
 
 h1, h2, a.headerLinkTo {
-    font-family: Playwrite;
+  font-family: Playwrite;
 }
 
 div.children {
-    margin: auto 22px;
+  margin: auto 22px;
 }
 
 button {
-    border-radius: 8px;
-    border: 1px solid transparent;
-    padding: 0.6em 1.2em;
-    font-size: 1em;
-    font-weight: 500;
-    font-family: Playwrite;
-    background-color: var(--button-background);
-    cursor: pointer;
-    transition: border-color 0.25s;
-    align-items: center;      /* 垂直方向の中央揃え */
-    color: var(--foreground);
-    flex: none; /* もしくは flex-grow: 0; flex-shrink: 0; */
-    width: 135px;
-    height: 58px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: Playwrite;
+  background-color: var(--button-background);
+  cursor: pointer;
+  transition: border-color 0.25s;
+  align-items: center;      /* 垂直方向の中央揃え */
+  color: var(--foreground);
+  flex: none; /* もしくは flex-grow: 0; flex-shrink: 0; */
+  width: 135px;
+  height: 58px;
 }
 
 button:hover {
-    border-color: var(--button-hover-border);
+  border-color: var(--button-hover-border);
 }
 
 h2 {
-    text-align: center;
+  text-align: center;
 }
 
 .snsButtonContainer {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 p.text {
-    text-indent: 1em;
-    margin: 6px auto;
+  text-indent: 1em;
+  margin: 6px auto;
 }
 
 .zenMaru {
-    font-family: ZenMaru;
+  font-family: ZenMaru;
 }
 
 .center {
-    text-align: center;
+  text-align: center;
 }
 
 .campaign {
-    font-weight: bolder;
-    font-size: larger;
+  font-weight: bolder;
+  font-size: larger;
 }
 
 .margin-0 {
-    margin: 5px 0 6px;
+  margin: 5px 0 6px;
+}
+
+label, input {
+  font-family: ZenMaru;
+  font-size: 1em;
 }

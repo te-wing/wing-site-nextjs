@@ -1,3 +1,5 @@
+'use client';
+
 import styles from './formbox.module.scss';
 
 export default function FormBox() {
