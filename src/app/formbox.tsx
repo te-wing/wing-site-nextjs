@@ -5,13 +5,13 @@ export default function FormBox() {
     <div className={styles.formBox}>
       <h4>アンケート</h4>
       <form id="survey-form">
-        <label for="username">ニックネーム（任意）：</label>
+        <label htmlFor="username">ニックネーム（任意）：</label>
         <input type="text" id="username" name="username" /><br /><br />
 
-        <label for="email">メールアドレス（任意）：</label>
+        <label htmlFor="email">メールアドレス（任意）：</label>
         <input type="email" id="email" name="email" /><br /><br />
 
-        <label for="rate">サイト評価（必須）：</label>
+        <label htmlFor="rate">サイト評価（必須）：</label>
         <select id="rate" name="rate" required>
           <option value="">選択してください</option>
           <option value="5">5 - とても良い</option>
@@ -22,7 +22,7 @@ export default function FormBox() {
         </select>
         <br /><br />
 
-        <label for="comment">ご意見・ご感想（任意）：</label>
+        <label htmlFor="comment">ご意見・ご感想（任意）：</label>
         <textarea id="comment" name="comment"></textarea><br/><br/>
 
         <button type="submit">送信</button>
