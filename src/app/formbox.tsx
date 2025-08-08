@@ -32,3 +32,44 @@ export default function FormBox() {
     </div>
   )
 }
+
+const form = document.getElementById('survey-form');
+const workerUrl = 'https://form-workers.wing.osaka';
+
+form.addEventListener('submit', async (event) => {
+  event.preventDefault(); // デフォルトのフォーム送信を停止
+
+  // フォームからデータを取得
+  const formData = new FormData(form);
+  const data = {
+    host: "wing.osaka", // ユーザーが見ているページのホスト名
+    username: formData.get('username') || undefined,
+    email: formData.get('email') || undefined,
+    rate: parseInt(formData.get('rate'), 10),
+    comment: formData.get('comment') || undefined,
+  };
+
+  try {
+    // fetch APIでWorkerにPOSTリクエストを送信
+    const response = await fetch(workerUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+
+    const result = await response.json();
+
+    if (response.ok) {
+      alert('アンケートの送信に成功しました！');
+      form.reset(); // フォームをリセット
+    } else {
+      alert('エラー：' + result.error);
+    }
+
+  } catch (error) {
+    console.error('通信エラー：', error);
+    alert('通信中にエラーが発生しました。');
+  }
+});
