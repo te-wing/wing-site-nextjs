@@ -10,7 +10,7 @@ export default function FormBox() {
 
     // 型ガードによるチェック
     if (!form || !(form instanceof HTMLFormElement)) {
-      console.error('フォーム要素が見つからないか、正しい形式ではありません。');
+      console.error('フォーム要素が見つからないか，正しい形式ではありません．');
       return;
     }
 
@@ -43,7 +43,7 @@ export default function FormBox() {
         const result = await response.json();
 
         if (response.ok) {
-          alert('アンケートの送信に成功しました！');
+          alert('おおきに，たぶんアンケートの送信ができました．');
           form.reset();
         } else {
           alert('エラー：' + result.error);
@@ -51,7 +51,7 @@ export default function FormBox() {
 
       } catch (error) {
         console.error('通信エラー：', error);
-        alert('通信中にエラーが発生しました。');
+        alert('通信中にエラーが発生しましたと思います．');
       }
     };
 
