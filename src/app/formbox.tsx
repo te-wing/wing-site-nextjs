@@ -5,29 +5,33 @@ import styles from './formbox.module.scss';
 
 export default function FormBox() {
   useEffect(() => {
-    // コンポーネントがマウント（レンダリング）された後にこのコードが実行される
     const form = document.getElementById('survey-form');
     const workerUrl = 'https://form-workers.wing.osaka';
 
-    if (!form) {
+    // 型ガードによるチェック
+    if (!form || !(form instanceof HTMLFormElement)) {
+      console.error('フォーム要素が見つからないか、正しい形式ではありません。');
       return;
     }
 
     const handleSubmit = async (event) => {
-      event.preventDefault(); // デフォルトのフォーム送信を停止
+      event.preventDefault();
 
-      // フォームからデータを取得
-      const formData = new FormData(form);
+      // FormDataのコンストラクタに渡す前に型アサーションを行う
+      const formData = new FormData(form as HTMLFormElement);
+
+      const rateValue = formData.get('rate');
       const data = {
         host: "wing.osaka",
         username: formData.get('username') || undefined,
         email: formData.get('email') || undefined,
-        rate: parseInt(formData.get('rate'), 10),
+        // rateが有効な数値であるかをチェックし、そうでない場合はundefinedにする
+        rate: rateValue ? parseInt(rateValue.toString(), 10) : undefined,
         comment: formData.get('comment') || undefined,
       };
-
+      
+      // ...（以下は元のコードと同じ）
       try {
-        // fetch APIでWorkerにPOSTリクエストを送信
         const response = await fetch(workerUrl, {
           method: 'POST',
           headers: {
@@ -40,7 +44,7 @@ export default function FormBox() {
 
         if (response.ok) {
           alert('アンケートの送信に成功しました！');
-          form.reset(); // フォームをリセット
+          form.reset();
         } else {
           alert('エラー：' + result.error);
         }
@@ -53,23 +57,20 @@ export default function FormBox() {
 
     form.addEventListener('submit', handleSubmit);
 
-    // クリーンアップ関数
     return () => {
       form.removeEventListener('submit', handleSubmit);
     };
 
-  }, []); // 依存配列を空にすることで、コンポーネントのマウント時のみ実行される
+  }, []);
 
-  return(
+  return (
     <div className={styles.formBox}>
       <h4>アンケート</h4>
       <form id="survey-form">
         <label htmlFor="username">ニックネーム（任意）：</label>
         <input type="text" id="username" name="username" /><br /><br />
-
         <label htmlFor="email">メールアドレス（任意）：</label>
         <input type="email" id="email" name="email" /><br /><br />
-
         <label htmlFor="rate">サイト評価（必須）：</label>
         <select id="rate" name="rate" required>
           <option value="">選択してください</option>
@@ -80,12 +81,10 @@ export default function FormBox() {
           <option value="1">1 - とても悪い</option>
         </select>
         <br /><br />
-
         <label htmlFor="comment">ご意見・ご感想（任意）：</label>
         <textarea id="comment" name="comment"></textarea><br/><br/>
-
         <button type="submit">送信</button>
       </form>
     </div>
-  )
+  );
 }
