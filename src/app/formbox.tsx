@@ -6,10 +6,10 @@ export default function FormBox() {
       <h4>アンケート</h4>
       <form id="survey-form">
         <label for="username">ニックネーム（任意）：</label>
-        <input type="text" id="username" name="username"><br /><br />
+        <input type="text" id="username" name="username" /><br /><br />
 
         <label for="email">メールアドレス（任意）：</label>
-        <input type="email" id="email" name="email"><br /><br />
+        <input type="email" id="email" name="email" /><br /><br />
 
         <label for="rate">サイト評価（必須）：</label>
         <select id="rate" name="rate" required>
