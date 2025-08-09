@@ -3,6 +3,7 @@ import Link from 'next/link';
 import BackToTopButton from './BackToTopButton.jsx';
 import WingLogo from './wingLogo';
 import Formbox from "./formbox";
+import Script from 'next/script';
 
 export const metadata = {
   title: "Wingのサイト",
@@ -50,6 +51,7 @@ export default function RootLayout({ children }) {
           </section>
           <Formbox />
         </footer>
+        <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer />
       </body>
     </html>
   );

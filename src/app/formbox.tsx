@@ -2,42 +2,35 @@
 
 import { useEffect } from 'react';
 import styles from './formbox.module.scss';
+import Script from 'next/script';
 
 export default function FormBox() {
   useEffect(() => {
     const form = document.getElementById('survey-form');
     const workerUrl = 'https://form-workers.wing.osaka';
 
-    // 型ガードによるチェック
     if (!form || !(form instanceof HTMLFormElement)) {
       console.error('フォーム要素が見つからないか，正しい形式ではありません．');
       return;
     }
 
-    const handleSubmit = async (event) => {
+    const handleSubmit = async (event: Event) => {
       event.preventDefault();
 
-      // FormDataのコンストラクタに渡す前に型アサーションを行う
       const formData = new FormData(form as HTMLFormElement);
 
-      const rateValue = formData.get('rate');
-      const data = {
-        host: "wing.osaka",
-        username: formData.get('username') || undefined,
-        email: formData.get('email') || undefined,
-        // rateが有効な数値であるかをチェックし、そうでない場合はundefinedにする
-        rate: rateValue ? parseInt(rateValue.toString(), 10) : undefined,
-        comment: formData.get('comment') || undefined,
-      };
-      
-      // ...（以下は元のコードと同じ）
+      // Turnstileのトークンが存在するかをチェック
+      const token = formData.get('cf-turnstile-response');
+      if (!token) {
+        alert('Turnstile認証に失敗しました。');
+        return;
+      }
+
       try {
+        // FormDataをそのままWorkerに送信
         const response = await fetch(workerUrl, {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data),
+          body: formData,
         });
 
         const result = await response.json();
@@ -65,6 +58,9 @@ export default function FormBox() {
 
   return (
     <div className={styles.formBox}>
+      {/* Turnstileスクリプトの読み込み */}
+      <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer />
+
       <h4 className={styles.h4}>アンケート</h4>
       <form className={styles.form} id="survey-form">
         <label htmlFor="username">ニックネーム（任意）：</label>
@@ -83,6 +79,14 @@ export default function FormBox() {
         <br /><br />
         <label htmlFor="comment">ご意見・ご感想（任意）：</label>
         <textarea id="comment" name="comment"></textarea><br/><br/>
+
+        {/* Turnstileウィジェットの追加 */}
+        <div
+          className="cf-turnstile"
+          data-sitekey='0x4AAAAAABpyNGg6V96WphRE'
+        ></div>
+        <br /><br />
+
         <button className="zenMaru" type="submit">送信</button>
       </form>
     </div>
