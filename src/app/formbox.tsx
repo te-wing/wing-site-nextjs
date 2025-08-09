@@ -19,13 +19,15 @@ export default function FormBox() {
 
       const formData = new FormData(form as HTMLFormElement);
 
+      // フォームに存在しない'host'の値を手動でFormDataに追加
+      formData.append('host', 'wing.osaka');
+
       // Turnstileのトークンが存在するかをチェック
       const token = formData.get('cf-turnstile-response');
       if (!token) {
-        alert('Turnstile認証に失敗しました。');
+        alert('Turnstileできてへんで〜．');
         return;
       }
-
       try {
         // FormDataをそのままWorkerに送信
         const response = await fetch(workerUrl, {
