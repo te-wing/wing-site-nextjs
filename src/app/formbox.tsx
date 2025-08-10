@@ -65,10 +65,10 @@ export default function FormBox() {
 
       <h4 className={styles.h4}>アンケート</h4>
       <form className={styles.form} id="survey-form">
-        <label htmlFor="username">ニックネーム（任意）：</label>
-        <input type="text" id="username" name="username" /><br /><br />
+        <label htmlFor="username">お名前（任意）：</label>
+        <input placeholder="ニックネームも可" type="text" id="username" name="username" /><br /><br />
         <label htmlFor="email">メールアドレス（任意）：</label>
-        <input type="email" id="email" name="email" /><br /><br />
+        <input placeholder="example@you.wing.osaka" type="email" id="email" name="email" /><br /><br />
         <label htmlFor="rate">サイト評価（必須）：</label>
         <select id="rate" name="rate" required>
           <option value="">選択してください</option>
@@ -80,7 +80,7 @@ export default function FormBox() {
         </select>
         <br /><br />
         <label htmlFor="comment">ご意見・ご感想（任意）：</label>
-        <textarea id="comment" name="comment"></textarea><br/><br/>
+        <textarea placeholder="コメント・お問合せなどを入力してください．" id="comment" name="comment"></textarea><br/><br/>
 
         {/* Turnstileウィジェットの追加 */}
         <div
